@@ -1,8 +1,8 @@
 // Components
-import SearchItem from './SearchItem';
+import SearchItem from "@components/list/SearchItem";
 
 // CSS
-import '../../css/SearchList.css'
+import '@css/SearchList.css'
 
 type Props = {
     searchResultsLoading: boolean,

@@ -1,13 +1,13 @@
 // Icons
-import HeartIcon from '../icons/HeartIcon';
+import HeartIcon from '@components/icons/HeartIcon';
 import infoIcon from '../../assets/icons/infoIcon.svg';
 import cashbackIcon from '../../assets/icons/cashbackIcon.svg'
 
 // CSS
-import '../../css/SearchItem.css'
+import '@css/SearchItem.css'
 
 // Helper Functions
-import getCurrencySymbol from '../../functions/helpers/getCurrencySymbol';
+import getCurrencySymbol from '@functions/helpers/getCurrencySymbol';
 
 type Props = {
     searchResult: {

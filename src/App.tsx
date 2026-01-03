@@ -2,11 +2,11 @@
 import { useState } from 'react'
 
 // Components
-import Navbar from './components/navbar/Navbar';
-import SearchList from './components/list/SearchList';
+import Navbar from '@components/navbar/Navbar';
+import SearchList from '@components/list/SearchList';
 
 // CSS
-import './css/App.css'
+import '@css/App.css'
 
 const App = () => {
 

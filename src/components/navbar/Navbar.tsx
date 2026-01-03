@@ -5,13 +5,13 @@ import { useState } from 'react'
 import axios from 'axios';
 
 // Icons
-import SearchIcon from '../icons/SearchIcon'
-import TimesIcon from '../icons/TimesIcon';
-import HeartIcon from '../icons/HeartIcon';
-import CartIcon from '../icons/CartIcon';
+import SearchIcon from '@components/icons/SearchIcon'
+import TimesIcon from '@components/icons/TimesIcon';
+import HeartIcon from '@components/icons/HeartIcon';
+import CartIcon from '@components/icons/CartIcon';
 
 // CSS
-import '../../css/Navbar.css'
+import '@css/Navbar.css'
 
 type Props = any;
 
