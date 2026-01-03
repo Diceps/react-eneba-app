@@ -1,0 +1,90 @@
+
+.searchListWrap {
+	width: 100%;
+	max-width: 950px;
+}
+
+.resultsCountWrap {
+	margin-top: 20px;
+    margin-bottom: 20px;
+
+    .resultsCount {
+		font-size: 13px;
+	}
+
+}
+
+.resultsWrap {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.resultsItem {
+	display: flex;
+  flex-direction: column;
+	border: 1px solid #63e3c2;
+}
+
+/* LOGO */
+.resultsItemLogo {
+	width: 100%;
+	max-width: 250px;
+}
+
+
+/* INFO */
+.resultsItemInfoWrap {
+	padding: 10px;
+}
+
+.resultsItemTitle {
+	font-weight: 800;
+	font-size: 12px;
+	margin-bottom: 8px;
+}
+
+.resultsItemLocation {
+	font-weight: 800;
+	font-size: 12px;
+	color: #23c299;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.resultsItemDiscountedPrice {
+	font-weight: 800;
+	font-size: 12px;
+	color: #b3aac9;
+
+	.resultsItemDiscountedPriceLineThrough {
+		text-decoration: line-through;
+	}
+
+	.resultsItemDiscountedPricePercent {
+		color: #84e916;
+	}
+}
+
+.resultsItemPrice {
+	font-weight: 800;
+	font-size: 22px;
+	margin-top: 5px;
+}
+
+.resultsItemCashback {
+	font-weight: 800;
+	font-size: 12px;
+	color: #84e916;
+}
+
+.resultsItemWishlisted {
+	font-size: 12px;
+}
+
+/* MEDIA */
+@media (max-width: 1200px) {
+  .searchListWrap {
+    max-width: 950px;
+  }
+}
