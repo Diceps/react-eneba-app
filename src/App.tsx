@@ -10,30 +10,30 @@ import './css/App.css'
 
 const App = () => {
 
-  /**
-   * @State
-   */
+    /**
+     * @State
+     */
 
-  const [searchResults, setSearchResults]               = useState([]);
-  const [searchResultsTotal, setSearchResultsTotal]     = useState<number>(0);
-  const [searchResultsLoading, setSearchResultsLoading] = useState<boolean>(false);
+    const [searchResults, setSearchResults]               = useState([]);
+    const [searchResultsTotal, setSearchResultsTotal]     = useState<number>(0);
+    const [searchResultsLoading, setSearchResultsLoading] = useState<boolean>(false);
  
-  return (
-    <>
+    return (
+        <>
 
-      <Navbar 
-        setSearchResults={setSearchResults} 
-        setSearchResultsTotal={setSearchResultsTotal}
-        setSearchResultsLoading={setSearchResultsLoading}
-      />
-      <SearchList 
-        searchResults={searchResults}
-        searchResultsTotal={searchResultsTotal}
-        searchResultsLoading={searchResultsLoading} 
-      />
+            <Navbar 
+                setSearchResults={setSearchResults} 
+                setSearchResultsTotal={setSearchResultsTotal}
+                setSearchResultsLoading={setSearchResultsLoading}
+            />
+            <SearchList 
+                searchResults={searchResults}
+                searchResultsTotal={searchResultsTotal}
+                searchResultsLoading={searchResultsLoading} 
+            />
 
-    </>
-  )
+        </>
+    )
 }
 
 export default App;

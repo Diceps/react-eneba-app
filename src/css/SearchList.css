@@ -22,7 +22,7 @@
 
 .resultsItem {
 	display: flex;
-  flex-direction: column;
+  	flex-direction: column;
 	border: 1px solid #63e3c2;
 }
 
