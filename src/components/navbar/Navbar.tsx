@@ -82,7 +82,7 @@ const Navbar = (props: Props) => {
                         </form>
 
                         <button type="button" className="cleanButton" onClick={() => setSearchInput("")}>
-                            <TimesIcon fill="#b3aac9" />
+                            <TimesIcon style={{ maxWidth: "16px", minWidth: "16px", height: "auto" }} fill="#b3aac9" />
                         </button>
 
                     </div>

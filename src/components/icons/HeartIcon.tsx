@@ -1,5 +1,5 @@
 type Props = {
-    style: any
+    style?: object
 }
 
 const HeartIcon = (props: Props) => (
@@ -9,7 +9,7 @@ const HeartIcon = (props: Props) => (
         height="24"
         strokeWidth="1.5"
         className="wSfDvT"
-        style={props.style}
+        style={props?.style || {}}
         viewBox="0 0 24 24"
     >
     <path

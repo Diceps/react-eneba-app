@@ -1,5 +1,5 @@
 type Props = {
-    style?: any,
+    style?: object,
     fill?: string
 }
 
@@ -9,7 +9,7 @@ const TimesIcon = (props: Props) => {
             xmlns="http://www.w3.org/2000/svg"
             width="14"
             height="14"
-            style={{ maxWidth: "16px", minWidth: "16px", height: "auto" }}
+            style={props?.style || {}}
             viewBox="0 0 14 14"
         >
         <path

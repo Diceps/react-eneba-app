@@ -1,5 +1,5 @@
 type Props = {
-    style?: any,
+    style?: object,
     fill?: string
 }
 
@@ -10,7 +10,7 @@ const SearchIcon = (props: Props) => (
         height="24"
         fill="none"
         className="guWAyx"
-        style={props.style}
+        style={props?.style || {}}
         viewBox="0 0 24 24"
     >
     <g

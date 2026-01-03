@@ -1,10 +1,10 @@
 // Icons
 import HeartIcon from '@components/icons/HeartIcon';
-import infoIcon from '../../assets/icons/infoIcon.svg';
-import cashbackIcon from '../../assets/icons/cashbackIcon.svg'
+import InfoIcon from '@components/icons/InfoIcon';
+import CashbackIcon from '@components/icons/CashbackIcon';
 
 // CSS
-import '@css/SearchItem.css'
+import '@css/SearchItem.css';
 
 // Helper Functions
 import getCurrencySymbol from '@functions/helpers/getCurrencySymbol';
@@ -38,7 +38,7 @@ const SearchItem = (props: Props) => {
                 {(props?.searchResult?.cashback || 0) > 0 && (
 
                     <div className="resultsItemCashbackRibbon">
-                        <img src={cashbackIcon} className="" />
+                        <CashbackIcon style={{ width: "auto", height: "16px" }} />
                         <span>Cashback</span>
                     </div>
 
@@ -76,7 +76,7 @@ const SearchItem = (props: Props) => {
                     </div>
 
                     <div className="resultsItemPrice">
-                        <span>{getCurrencySymbol(props?.searchResult?.currency || null)}{(props?.searchResult?.price || 0) / 100}</span> <span><img src={infoIcon} style={{ maxWidth: "16px", minWidth: "16px", height: "auto" }} /></span>
+                        <span>{getCurrencySymbol(props?.searchResult?.currency || null)}{(props?.searchResult?.price || 0) / 100}</span> <span><InfoIcon style={{ maxWidth: "16px", minWidth: "16px", height: "auto" }} /></span>
                     </div>
 
                     {props?.searchResult?.cashback && (

@@ -1,5 +1,5 @@
 type Props = {
-    style: any
+    style?: object
 }
 
 const CartIcon = (props: Props) => (
@@ -8,7 +8,7 @@ const CartIcon = (props: Props) => (
         width="16"
         height="16"
         fill="none"
-        style={props.style}
+        style={props?.style || {}}
         viewBox="0 0 16 16"
     >
         <path
