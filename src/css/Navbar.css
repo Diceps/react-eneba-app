@@ -101,9 +101,11 @@
     align-items: center;
     gap: 15px;
 
-    img {
-        width: 24px;
-        height: 24px;
+    .navbarControlsUserImage {
+        width: 31px;
+        height: 31px;
+        border-radius: 99px;
+        border: 1px solid #c5b1f1;
     }
 }
 

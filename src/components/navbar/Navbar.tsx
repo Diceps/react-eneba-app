@@ -1,5 +1,5 @@
 // React
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 // Axios
 import axios from 'axios';
@@ -24,19 +24,30 @@ const Navbar = (props: Props) => {
 
     const [searchInput, setSearchInput] = useState<string>("");
 
+
+    /**
+     * @Effect - to fetch all the results on initial load
+     */
+
+    useEffect(() => {
+
+        formSearch();
+
+    }, []);
+
+
     /**
      * Form control - make an API call to fetch the results based on
      * the search query and set the States accordingly
      */
 
-    const formSearch = (formData: any) => {
+    const formSearch = () => {
 
         props.setSearchResultsLoading(true);
 
         axios.get("https://phpstack-1570365-6112475.cloudwaysapps.com/list/", {
-        //axios.get("http://localhost/eneba-react/rest-search-api.php", {
                 params: {
-                    search: formData.get("searchQuery")
+                    search: searchInput
                 }
             })
             .then((res) => {
@@ -117,7 +128,7 @@ const Navbar = (props: Props) => {
                             </div>
 
                             <div>
-                              user
+                                <img className="navbarControlsUserImage" src="/assets/images/enebian.svg" alt="User Image" />
                             </div>
 
                         </div>
