@@ -72,9 +72,13 @@ const SearchItem = (props: Props) => {
 
                 <div>
 
+                    {(props?.searchResult?.starting_price || 0) > 0 && (
+
                     <div className="resultsItemDiscountedPrice">
-                        <span>From <span className="resultsItemDiscountedPriceLineThrough">{getCurrencySymbol(props?.searchResult?.currency || null)}{(props?.searchResult?.starting_price || 0) / 100}</span> <span className="resultsItemDiscountedPricePercent">-18%</span></span>
+                        <span>From <span className="resultsItemDiscountedPriceLineThrough">{getCurrencySymbol(props?.searchResult?.currency || null)}{(props?.searchResult?.starting_price || 0) / 100}</span> <span className="resultsItemDiscountedPricePercent">-{calcPriceDiffPercent((props?.searchResult?.starting_price || 0), (props?.searchResult?.price || 0))}%</span></span>
                     </div>
+
+                    )}
 
                     <div className="resultsItemPrice">
                         <span>{getCurrencySymbol(props?.searchResult?.currency || null)}{((props?.searchResult?.price || 0) / 100).toFixed(2)}</span> <span><InfoIcon style={{ maxWidth: "16px", minWidth: "16px", height: "auto" }} /></span>
@@ -102,3 +106,7 @@ const SearchItem = (props: Props) => {
 }
 
 export default SearchItem;
+
+const calcPriceDiffPercent = (startPrice:number, endPrice:number) => {
+    return startPrice > endPrice ? (100 - (endPrice * 100 / startPrice)).toFixed(0) : 0;
+}
