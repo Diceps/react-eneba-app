@@ -13,6 +13,7 @@ import CartIcon from '@components/icons/CartIcon';
 // CSS
 import '@css/Navbar.css'
 
+// Types
 type Props = any;
 
 const Navbar = (props: Props) => {
@@ -21,7 +22,7 @@ const Navbar = (props: Props) => {
      * @State
      */
 
-    const [searchInput, setSearchInput] = useState("");
+    const [searchInput, setSearchInput] = useState<string>("");
 
     /**
      * Form control - make an API call to fetch the results based on
@@ -30,19 +31,15 @@ const Navbar = (props: Props) => {
 
     const formSearch = (formData: any) => {
 
-        console.log('formData..');
-        console.log(formData.get("searchQuery"));
-
         props.setSearchResultsLoading(true);
 
-        axios.get("http://localhost/eneba-react/rest-search-api.php", {
-            params: {
-                search: formData.get("searchQuery")
-            }
-        })
+        axios.get("https://phpstack-1570365-6112475.cloudwaysapps.com/rest-search-api.php", {
+        //axios.get("http://localhost/eneba-react/rest-search-api.php", {
+                params: {
+                    search: formData.get("searchQuery")
+                }
+            })
             .then((res) => {
-
-                console.log(res.data);
 
                 props.setSearchResultsTotal(res?.data?.count || 0);
                 props.setSearchResults(res?.data?.results || []);
@@ -65,56 +62,64 @@ const Navbar = (props: Props) => {
 
                 <div className="navbarWrap">
 
-                    <div className="navbarLogoWrap">
-                        <img className="navbarLogo" src="/assets/images/logoFull.svg" alt="Eneba logo" />
-                    </div>
+                    <div className="navbarWrapFirstSection">
 
-                    <div className="navbarSearchFormWrap">
+                        <div className="navbarLogoWrap">
+                            <img className="navbarLogo" src="/assets/images/logoFull.svg" alt="Eneba logo" />
+                        </div>
 
-                        <SearchIcon fill="#b3aac9" style={{ maxWidth: "24px", minWidth: "24px", height: "auto" }} />
+                        <div className="navbarSearchFormWrap">
 
-                        <form className="navbarSearchForm" action={formSearch}>
+                            <SearchIcon fill="#b3aac9" style={{ maxWidth: "24px", minWidth: "24px", height: "auto" }} />
 
-                            <div>
-                                <input type="text" name="searchQuery" placeholder="Search..." value={searchInput} onChange={(e) => setSearchInput(e.target.value)} />
+                            <form className="navbarSearchForm" action={formSearch}>
+
+                                <div>
+                                    <input type="text" name="searchQuery" placeholder="Search..." value={searchInput} onChange={(e) => setSearchInput(e.target.value)} />
+                                </div>
+
+                            </form>
+
+                            <button type="button" className="cleanButton" onClick={() => setSearchInput("")}>
+                                <TimesIcon style={{ maxWidth: "16px", minWidth: "16px", height: "auto" }} fill="#b3aac9" />
+                            </button>
+
+                        </div>
+
+                        <div className="navbarLangSelectorWrap">
+
+                            <div className="navbarLangIcon">
+                                <img src="/assets/icons/lithuania.svg" alt="LT"/>
                             </div>
 
-                        </form>
+                            <div className="navbarLangSelector">
 
-                        <button type="button" className="cleanButton" onClick={() => setSearchInput("")}>
-                            <TimesIcon style={{ maxWidth: "16px", minWidth: "16px", height: "auto" }} fill="#b3aac9" />
-                        </button>
+                                <span>English EU</span>
+                                <span className="separator"></span>
+                                <span>EUR</span>
 
-                    </div>
-
-                    <div className="navbarLangSelectorWrap">
-
-                        <div className="navbarLangIcon">
-                            <img src="/assets/icons/lithuania.svg" />
-                        </div>
-
-                        <div className="navbarLangSelector">
-
-                            <span>English EU</span>
-                            <span className="separator"></span>
-                            <span>EUR</span>
+                            </div>
 
                         </div>
 
                     </div>
 
-                    <div className="navbarControls">
+                    <div>
 
-                        <div>
-                            <HeartIcon style={{ maxWidth: "24px", minWidth: "24px", height: "auto" }} />
-                        </div>
+                        <div className="navbarControls">
 
-                        <div>
-                            <CartIcon style={{ maxWidth: "24px", minWidth: "24px", height: "auto" }} />
-                        </div>
+                            <div>
+                                <HeartIcon style={{ maxWidth: "24px", minWidth: "24px", height: "auto" }} />
+                            </div>
 
-                        <div>
-                          user
+                            <div>
+                                <CartIcon style={{ maxWidth: "24px", minWidth: "24px", height: "auto" }} />
+                            </div>
+
+                            <div>
+                              user
+                            </div>
+
                         </div>
 
                     </div>

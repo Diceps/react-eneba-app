@@ -4,6 +4,7 @@ import SearchItem from "@components/list/SearchItem";
 // CSS
 import '@css/SearchList.css'
 
+// Types
 type Props = {
     searchResultsLoading: boolean,
     searchResultsTotal: number,

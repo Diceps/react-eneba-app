@@ -9,6 +9,7 @@ import '@css/SearchItem.css';
 // Helper Functions
 import getCurrencySymbol from '@functions/helpers/getCurrencySymbol';
 
+// Types
 type Props = {
     searchResult: {
         image_url: string,
@@ -63,20 +64,20 @@ const SearchItem = (props: Props) => {
                         <span>{props?.searchResult?.name || ""}</span>
                     </div>
 
-                </div>
-
-                <div>
-
                     <div className="resultsItemLocation">
                         <span>{props?.searchResult?.location || ""}</span>
                     </div>
+
+                </div>
+
+                <div>
 
                     <div className="resultsItemDiscountedPrice">
                         <span>From <span className="resultsItemDiscountedPriceLineThrough">{getCurrencySymbol(props?.searchResult?.currency || null)}{(props?.searchResult?.starting_price || 0) / 100}</span> <span className="resultsItemDiscountedPricePercent">-18%</span></span>
                     </div>
 
                     <div className="resultsItemPrice">
-                        <span>{getCurrencySymbol(props?.searchResult?.currency || null)}{(props?.searchResult?.price || 0) / 100}</span> <span><InfoIcon style={{ maxWidth: "16px", minWidth: "16px", height: "auto" }} /></span>
+                        <span>{getCurrencySymbol(props?.searchResult?.currency || null)}{((props?.searchResult?.price || 0) / 100).toFixed(2)}</span> <span><InfoIcon style={{ maxWidth: "16px", minWidth: "16px", height: "auto" }} /></span>
                     </div>
 
                     {props?.searchResult?.cashback && (

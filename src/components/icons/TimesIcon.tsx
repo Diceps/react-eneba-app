@@ -1,3 +1,4 @@
+// Types
 type Props = {
     style?: object,
     fill?: string
