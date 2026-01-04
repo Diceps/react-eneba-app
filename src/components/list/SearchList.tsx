@@ -9,6 +9,7 @@ type Props = {
     searchResultsLoading: boolean,
     searchResultsTotal: number,
     searchResults: {
+        id: number,
         image_url: string,
         cashback: number,
         platform: string,
@@ -35,8 +36,8 @@ const searchList = (props: Props) => {
 
             <div className="resultsWrap">
 
-                {props.searchResults.map((item, index) => 
-                    <SearchItem key={`TODO-${index}`} searchResult={item} />
+                {props.searchResults.map((item) => 
+                    <SearchItem key={`search-item-${item.id}`} searchResult={item} />
                 )}
 
             </div>

@@ -33,7 +33,7 @@ const Navbar = (props: Props) => {
 
         props.setSearchResultsLoading(true);
 
-        axios.get("https://phpstack-1570365-6112475.cloudwaysapps.com/rest-search-api.php", {
+        axios.get("https://phpstack-1570365-6112475.cloudwaysapps.com/list/", {
         //axios.get("http://localhost/eneba-react/rest-search-api.php", {
                 params: {
                     search: formData.get("searchQuery")

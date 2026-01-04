@@ -84,7 +84,7 @@
 
 /* MEDIA */
 @media (max-width: 1200px) {
-  .searchListWrap {
-    max-width: 950px;
-  }
+	.searchListWrap {
+		max-width: 950px;
+	}
 }

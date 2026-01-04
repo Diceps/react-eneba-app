@@ -36,7 +36,6 @@
     flex: 0 1 350px;
     align-items: center;
     gap: 10px;
-    /*width: 100%;*/
     padding: 0 10px;
     border: 1px solid #ffffff;
 
@@ -44,10 +43,8 @@
         display: flex;
         align-items: center;
         font-weight: 800;
-        /*font-size: 1.9rem;*/
         line-height: 1;
         color: #fff;
-        /*padding: 0 0 0 40px;*/
         background: rgba(0, 0, 0, 0);
         width: 100%;
         min-height: 55px;
@@ -63,8 +60,6 @@
 
 .navbarSearchForm {
     width: 100%;
-    /*display: flex;*/
-    /*flex: 0 1 550px;*/
 }
 
 
@@ -114,7 +109,6 @@
 
 
 /* MEDIA */
-
 @media (max-width: 1200px) {
     .navbarWrap {
         max-width: 950px;

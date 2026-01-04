@@ -12,6 +12,7 @@ import getCurrencySymbol from '@functions/helpers/getCurrencySymbol';
 // Types
 type Props = {
     searchResult: {
+        id: number,
         image_url: string,
         cashback: number,
         platform: string,
