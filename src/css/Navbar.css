@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     background-color: #4618ac;
-    padding: 0 20px;
     width: 100%;
 }
 
@@ -23,6 +22,8 @@
 .navbarLogoWrap {
     display: flex;
     align-items: center;
+    width: 100%;
+    max-width: 155px;
 
     .navbarLogo {
         width: 100%;
