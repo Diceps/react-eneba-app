@@ -76,7 +76,7 @@ const Navbar = (props: Props) => {
                     <div className="navbarWrapFirstSection">
 
                         <div className="navbarLogoWrap">
-                            <img className="navbarLogo" src="/assets/images/logoFull.svg" alt="Eneba logo" />
+                            <img className="navbarLogo" src="/react-eneba-app/assets/images/logoFull.svg" alt="Eneba logo" />
                         </div>
 
                         <div className="navbarSearchFormWrap">
@@ -100,7 +100,7 @@ const Navbar = (props: Props) => {
                         <div className="navbarLangSelectorWrap">
 
                             <div className="navbarLangIcon">
-                                <img src="/assets/icons/lithuania.svg" alt="LT"/>
+                                <img src="/react-eneba-app/assets/icons/lithuania.svg" alt="LT"/>
                             </div>
 
                             <div className="navbarLangSelector">
@@ -128,7 +128,7 @@ const Navbar = (props: Props) => {
                             </div>
 
                             <div>
-                                <img className="navbarControlsUserImage" src="/assets/images/enebian.svg" alt="User Image" />
+                                <img className="navbarControlsUserImage" src="/react-eneba-app/assets/images/enebian.svg" alt="User Image" />
                             </div>
 
                         </div>
